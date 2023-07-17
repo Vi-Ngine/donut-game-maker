@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>CategoryInit</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#initialization-and-shutdown">Initialization and Shutdown</a><ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#functions">Functions</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="initialization-and-shutdown">Initialization and Shutdown</h1>
+<p>'''Include File(s):''' [<a href="http://hg.libsdl.org/SDL/file/default/include/SDL.h.html" class="uri">http://hg.libsdl.org/SDL/file/default/include/SDL.h</a> SDL.h]</p>
+<h2 id="introduction">Introduction</h2>
+<p>The functions in this category are used to set up SDL for use and generally have global effects in your program.</p>
+<p>=== Introduction to Initialization === To begin using SDL in your program <a href=".html">[SDL_Init]</a> must be called before most other SDL functions. The role of <a href=".html">[SDL_Init]</a> is to properly initialize the SDL library and start each of the various subsystems requested as part of the call.</p>
+<p>: {i} The [[CategoryIO|File I/O]] and [[CategoryThread|Threading]] subsystems are initialized by default. To initialize other subsystems you must specifically call them. Multiple subsystems may be OR'd together. : ''Example:'' :: <syntaxhighlight lang="c"> SDL_Init(SDL_INIT_VIDEO|SDL_INIT_AUDIO); </syntaxhighlight> :: This initializes the 2 default subsystems plus the [[CategoryVideo|Video]], [[CategoryAudio|Audio]], and [[CategoryEvents|Event Handling]] subsystems. :: The [[CategoryEvents|Event Handling]] subsystem is initialized implicitly by the [[CategoryVideo|Video]] subsystem. ::</p>
+<p>It should be noted that on some operating systems, <a href=".html">[SDL_Init]</a> will fail if SDL_main() has not been defined as the entry point for the program. Calling <a href=".html">[SDL_SetMainReady]</a> prior to <a href=".html">[SDL_Init]</a> will circumvent this failure condition, however, users should be careful when calling <a href=".html">[SDL_SetMainReady]</a> as improper initialization may cause crashes and hard to diagnose problems.</p>
+<p>=== Introduction to Shut Down === <a href=".html">[SDL_Quit]</a> should be called before an SDL application exits to safely shut down all subsystems, including the default ones.</p>
+<ul>
+<li>It is not necessary to specify individual subsystems when using <a href=".html">[SDL_Quit]</a> as it will automatically shut down all active subsystems.</li>
+</ul>
+<!-- #Remove this line and the ## in front of the following if they become relevant to this category to activate them. -->
+<!-- #== Enumerations == -->
+<!-- #<<FullSearchCached(category:CategoryEnum CategoryInit -title:SGEnumerations)>> -->
+<!-- #== Structures == -->
+<!-- #<<FullSearchCached(category:CategoryStruct CategoryInit -title:SGStructures)>> -->
+<h2 id="functions">Functions</h2>
+<p>&lt;&lt;FullSearchCached(category:CategoryInit -CategoryEnum -CategoryStruct -title:SGFunctions)&gt;&gt;</p>
+<!-- BEGIN CATEGORY LIST -->
+<ul>
+<li><a href="SDL_Init.html">SDL_Init</a></li>
+<li><a href="SDL_InitSubSystem.html">SDL_InitSubSystem</a></li>
+<li><a href="SDL_Quit.html">SDL_Quit</a></li>
+<li><a href="SDL_QuitSubSystem.html">SDL_QuitSubSystem</a></li>
+<li><a href="SDL_SetMainReady.html">SDL_SetMainReady</a></li>
+<li><a href="SDL_WasInit.html">SDL_WasInit</a> <!-- END CATEGORY LIST --> ---- <a href="CategoryCategory.html">CategoryCategory</a></li>
+</ul>
+</body>
+</html>

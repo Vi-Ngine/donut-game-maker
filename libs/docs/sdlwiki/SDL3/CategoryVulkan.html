@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>CategoryVulkan</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#vulkan-support">Vulkan Support</a><ul>
+<li><a href="#introduction">Introduction</a></li>
+</ul></li>
+<li><a href="#create-your-sdl-window-with-the-sdl_window_vulkan-flag">Create your SDL window with the SDL_WINDOW_VULKAN flag.</a></li>
+<li><a href="#if-necessary-use-sdl_vulkan_loadlibrary-and-sdl_vulkan_getvkinstanceprocaddr-to-load-the-vulkan-library-and-query-for-driver-function-pointers-after-initializing-the-video-subsystem">If necessary, use [[SDL_Vulkan_LoadLibrary]] and [[SDL_Vulkan_GetVkInstanceProcAddr]] to load the Vulkan library and query for driver function pointers (after initializing the video subsystem)</a></li>
+<li><a href="#query-for-required-extensions-using-sdl_vulkan_getinstanceextensions-and-use-this-information-to-create-a-vkinstance">Query for required extensions using [[SDL_Vulkan_GetInstanceExtensions]] and use this information to create a <code>VkInstance</code></a></li>
+<li><a href="#create-a-surface-for-the-window-to-draw-on-using-sdl_vulkan_createsurface">Create a surface for the window to draw on using [[SDL_Vulkan_CreateSurface]]</a></li>
+<li><a href="#when-setting-up-pipelines-and-framebuffers-for-your-newly-created-surface-use-sdl_vulkan_getdrawablesize-to-query-the-surface-extent">When setting up pipelines and framebuffers for your newly created surface, use [[SDL_Vulkan_GetDrawableSize]] to query the surface extent</a><ul>
+<li><a href="#functions">Functions</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="vulkan-support">Vulkan Support</h1>
+<p>'''Include File(s):''' [<a href="http://hg.libsdl.org/SDL/file/default/include/SDL_vulkan.h.html" class="uri">http://hg.libsdl.org/SDL/file/default/include/SDL_vulkan.h</a> SDL_vulkan.h]</p>
+<h2 id="introduction">Introduction</h2>
+<p>This category contains functions for creating a Vulkan instance with the required Vulkan extensions for surface creation.</p>
+<p>The general flow of a Vulkan backed SDL application will be the following:</p>
+<h1 id="create-your-sdl-window-with-the-sdl_window_vulkan-flag">Create your SDL window with the SDL_WINDOW_VULKAN flag.</h1>
+<h1 id="if-necessary-use-sdl_vulkan_loadlibrary-and-sdl_vulkan_getvkinstanceprocaddr-to-load-the-vulkan-library-and-query-for-driver-function-pointers-after-initializing-the-video-subsystem">If necessary, use [[SDL_Vulkan_LoadLibrary]] and [[SDL_Vulkan_GetVkInstanceProcAddr]] to load the Vulkan library and query for driver function pointers (after initializing the video subsystem)</h1>
+<h1 id="query-for-required-extensions-using-sdl_vulkan_getinstanceextensions-and-use-this-information-to-create-a-vkinstance">Query for required extensions using [[SDL_Vulkan_GetInstanceExtensions]] and use this information to create a <code>VkInstance</code></h1>
+<h1 id="create-a-surface-for-the-window-to-draw-on-using-sdl_vulkan_createsurface">Create a surface for the window to draw on using [[SDL_Vulkan_CreateSurface]]</h1>
+<h1 id="when-setting-up-pipelines-and-framebuffers-for-your-newly-created-surface-use-sdl_vulkan_getdrawablesize-to-query-the-surface-extent">When setting up pipelines and framebuffers for your newly created surface, use [[SDL_Vulkan_GetDrawableSize]] to query the surface extent</h1>
+<h2 id="functions">Functions</h2>
+<!-- BEGIN CATEGORY LIST -->
+<ul>
+<li><a href="SDL_Vulkan_CreateSurface.html">SDL_Vulkan_CreateSurface</a></li>
+<li><a href="SDL_Vulkan_GetInstanceExtensions.html">SDL_Vulkan_GetInstanceExtensions</a></li>
+<li><a href="SDL_Vulkan_GetVkInstanceProcAddr.html">SDL_Vulkan_GetVkInstanceProcAddr</a></li>
+<li><a href="SDL_Vulkan_LoadLibrary.html">SDL_Vulkan_LoadLibrary</a></li>
+<li><a href="SDL_Vulkan_UnloadLibrary.html">SDL_Vulkan_UnloadLibrary</a> <!-- END CATEGORY LIST --></li>
+</ul>
+<hr />
+<p><a href="CategoryCategory.html">CategoryCategory</a></p>
+</body>
+</html>
