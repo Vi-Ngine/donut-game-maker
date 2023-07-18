@@ -4,3 +4,9 @@
 [submodule "libs/SDL"]
 	path = libs/SDL
 	url = https://github.com/gameoflord012/SDL.git
+[submodule "libs/glfw"]
+	path = libs/glfw
+	url = https://github.com/gameoflord012/glfw.git
+[submodule "libs/glew"]
+	path = libs/glew
+	url = https://github.com/gameoflord012/glew.git

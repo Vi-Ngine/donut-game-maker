@@ -1,0 +1,4 @@
+#ifndef DONUT_H
+#define DONUT_H
+#define DONUT_GetAssetFile(x) ("@DONUT_ASSETS_PATH@/" x)
+#endif // DONUT_H
